@@ -4,6 +4,10 @@ const mongoose = require("mongoose");
 const cors = require("cors");
 require("dotenv").config();
 
+// imports (routes)
+const courseRoutes=require('./routes/course-routes');
+const HttpError = require("./helpers/http-error");
+
 // db connection
 mongoose
   .connect(process.env.DATABASE)
@@ -26,6 +30,9 @@ if (process.env.NODE_ENV === "development") {
 } else {
   app.use(cors());
 }
+
+// routes middlewares
+app.use('/api/course',courseRoutes);
 
 // Error Handler
 app.use(() => {
