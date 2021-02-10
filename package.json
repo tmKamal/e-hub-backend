@@ -1,0 +1,14 @@
+{
+  "name": "e-hub-backend",
+  "version": "1.0.0",
+  "description": "This is the backend of the e-hub learning platform",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "e-learning"
+  ],
+  "author": "tmKamal",
+  "license": "ISC"
+}
