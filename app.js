@@ -6,6 +6,7 @@ require("dotenv").config();
 
 // imports (routes)
 const courseRoutes=require('./routes/course-routes');
+const authRoutes=require('./routes/auth-routes');
 const HttpError = require("./helpers/http-error");
 
 // db connection
@@ -33,6 +34,7 @@ if (process.env.NODE_ENV === "development") {
 
 // routes middlewares
 app.use('/api/course',courseRoutes);
+app.use('/api/auth',authRoutes);
 
 // Error Handler
 app.use(() => {
